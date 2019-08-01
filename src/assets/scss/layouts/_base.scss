@@ -12,4 +12,6 @@ a {
 img {
   display: block;
   object-fit: contain;
+  user-select: none;
+  pointer-events: none;
 }
