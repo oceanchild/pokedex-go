@@ -14,6 +14,11 @@ export default new Router({
       component: Pokedex
     },
     {
+      path: '/:id',
+      name: 'pokemon',
+      component: () => import('@/views/Pokemon.vue')
+    },
+    {
       path: '*',
       redirect: { name: 'home' }
     }

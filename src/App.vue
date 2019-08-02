@@ -2,7 +2,9 @@
   <div id="app">
     <Header />
     <main class="main">
-      <router-view />
+      <transition name="slide" mode="out-in">
+        <router-view />
+      </transition>
     </main>
   </div>
 </template>
@@ -19,4 +21,20 @@ export default {
 
 <style lang="scss">
 @import "@/assets/scss/styles.scss";
+
+.slide {
+  &-enter-active {
+    transition: all 0.5s ease;
+  }
+
+  &-leave-active {
+    transition: all ease-out;
+  }
+
+  &-enter,
+  &-leave-to {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+}
 </style>
