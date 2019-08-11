@@ -1,14 +1,196 @@
 [
   {
     "id": "001",
-    "name": "Bulbizarre"
+    "name": "Bulbizarre",
+    "family": "graine",
+    "types": ["grass", "poison"],
+    "description": "Bulbizarre passe son temps à faire la sieste sous le soleil. Il y a une graine sur son dos. Il absorbe les rayons du soleil pour faire doucement pousser la graine.",
+    "stats": [
+      {
+        "height": "0.7",
+        "weight": "6.9",
+        "attack": "118",
+        "defense": "111",
+        "stamina": "128",
+        "pc": "1115"
+      }
+    ],
+    "weaknesses": ["fire", "flying", "ice", "psychic"],
+    "attacks": {
+      "fast": [
+        {
+          "type": "grass",
+          "name": "Fouet Lianes",
+          "damage": "7"
+        },
+        {
+          "type": "normal",
+          "name": "Charge",
+          "damage": "5"
+        }
+      ],
+      "charged": [
+        {
+          "type": "poison",
+          "name": "Bomb-Beurk",
+          "damage": "80"
+        },
+        {
+          "type": "grass",
+          "name": "Canon Graine",
+          "damage": "55"
+        },
+        {
+          "type": "grass",
+          "name": "Mégafouet",
+          "damage": "90"
+        }
+      ]
+    },
+    "evolutions": [
+      {
+        "id": "001",
+        "name": "Bulbizarre"
+      },
+      {
+        "id": "002",
+        "name": "Herbizarre"
+      },
+      {
+        "id": "003",
+        "name": "Florizarre"
+      }
+    ]
   },
   {
     "id": "002",
-    "name": "Herbizarre"
+    "name": "Herbizarre",
+    "family": "graine",
+    "types": ["grass", "poison"],
+    "description": "Un bourgeon a poussé sur le dos de ce Pokémon. Pour en supporter le poids, Herbizarre a dû se muscler les pattes. Lorsqu'il commence à se prélasser au soleil, ça signifie que son bourgeon va éclore, donnant naissance à une fleur.",
+    "stats": [
+      {
+        "height": "1",
+        "weight": "13",
+        "attack": "151",
+        "defense": "143",
+        "stamina": "155",
+        "pc": "1699"
+      }
+    ],
+    "weaknesses": ["fire", "flying", "ice", "psychic"],
+    "attacks": {
+      "fast": [
+        {
+          "type": "grass",
+          "name": "Tranch’Herbe",
+          "damage": "13"
+        },
+        {
+          "type": "grass",
+          "name": "Fouet Lianes",
+          "damage": "7"
+        }
+      ],
+      "charged": [
+        {
+          "type": "poison",
+          "name": "Bomb-Beurk",
+          "damage": "80"
+        },
+        {
+          "type": "grass",
+          "name": "Lance-Soleil",
+          "damage": "180"
+        },
+        {
+          "type": "grass",
+          "name": "Mégafouet",
+          "damage": "90"
+        }
+      ]
+    },
+    "evolutions": [
+      {
+        "id": "001",
+        "name": "Bulbizarre"
+      },
+      {
+        "id": "002",
+        "name": "Herbizarre"
+      },
+      {
+        "id": "003",
+        "name": "Florizarre"
+      }
+    ]
   },
   {
     "id": "003",
-    "name": "Florizarre"
+    "name": "Florizarre",
+    "family": "graine",
+    "types": ["grass", "poison"],
+    "description": "Une belle fleur se trouve sur le dos de Florizarre. Elle prend une couleur vive lorsqu'elle est bien nourrie et bien ensoleillée. Le parfum de cette fleur peut apaiser les gens.",
+    "stats": [
+      {
+        "height": "2",
+        "weight": "100",
+        "attack": "198",
+        "defense": "189",
+        "stamina": "190",
+        "pc": "2720"
+      }
+    ],
+    "weaknesses": ["fire", "flying", "ice", "psychic"],
+    "attacks": {
+      "fast": [
+        {
+          "type": "grass",
+          "name": "Tranch’Herbe",
+          "damage": "13"
+        },
+        {
+          "type": "grass",
+          "name": "Fouet Lianes",
+          "damage": "7"
+        }
+      ],
+      "charged": [
+        {
+          "type": "poison",
+          "name": "Bomb-Beurk",
+          "damage": "80"
+        },
+        {
+          "type": "grass",
+          "name": "Tempête Florale",
+          "damage": "110"
+        },
+        {
+          "type": "grass",
+          "name": "Lance-Soleil",
+          "damage": "180"
+        },
+        {
+          "type": "grass",
+          "name": "Végé-Attak (event)",
+          "damage": "100"
+        }
+      ]
+    },
+    "evolutions": [
+      {
+        "id": "001",
+        "name": "Bulbizarre"
+      },
+      {
+        "id": "002",
+        "name": "Herbizarre"
+      },
+      {
+        "id": "003",
+        "name": "Florizarre"
+      }
+    ]
   }
 ]
