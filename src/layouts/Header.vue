@@ -38,6 +38,7 @@ export default {
   justify-content: space-between;
   padding: 0 5%;
   background-color: #ffffff;
+  z-index: 9;
 
   &.is-scrolled {
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
