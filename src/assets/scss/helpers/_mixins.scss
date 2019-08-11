@@ -1,0 +1,19 @@
+@mixin breakPoint($size) {
+  @if $size==tablet {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+
+  @else if $size==laptop {
+    @media (min-width: 1280px) {
+      @content;
+    }
+  }
+
+  @else if $size==desktop {
+    @media (min-width: 1440px) {
+      @content;
+    }
+  }
+}
