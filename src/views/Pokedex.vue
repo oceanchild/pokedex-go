@@ -1,7 +1,7 @@
 <template>
   <div class="pokedex">
     <ul class="pokedex__list">
-      <li v-for="pokemon in pokemons" :key="pokemon.value" class="pokedex__item">
+      <li v-for="pokemon in filtrePokemons" :key="pokemon.value" class="pokedex__item">
         <router-link :to="pokemon.id" class="pokedex__link">
           <img :src="getImage(pokemon.id)" :alt="pokemon.name" class="pokedex__image" />
         </router-link>
@@ -18,6 +18,18 @@ export default {
     return {
       pokemons: data
     };
+  },
+  computed: {
+    filtrePokemons() {
+      if (!this.$store.state.pokemon) return this.pokemons;
+      return this.pokemons.filter(pokemon => {
+        return (
+          pokemon.name
+            .toLowerCase()
+            .indexOf(this.$store.state.pokemon.toLowerCase()) >= 0
+        );
+      });
+    }
   },
   methods: {
     getImage(id) {
