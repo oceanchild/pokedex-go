@@ -1,11 +1,29 @@
 <template>
   <header class="header">
     <router-link to="/" class="header__link">Pokédex GO</router-link>
+    <div class="header__search">
+      <input
+        type="text"
+        id="search"
+        placeholder="Bulbizarre"
+        v-model="pokemon"
+        @input="filtrePokemon"
+        class="header__input"
+      />
+      <label for="search" class="header__label">
+        <img src="@/assets/images/search.svg" alt class="header__icon" />
+      </label>
+    </div>
   </header>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      pokemon: null
+    };
+  },
   mounted() {
     document.addEventListener("scroll", this.scroll);
   },
@@ -20,6 +38,9 @@ export default {
       } else {
         header.classList.remove("is-scrolled");
       }
+    },
+    filtrePokemon() {
+      this.$store.state.pokemon = this.pokemon;
     }
   }
 };
@@ -46,6 +67,25 @@ export default {
 
   &__link {
     font-weight: bold;
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    padding: 6px 10px;
+    background-color: #eeeeee;
+    border-radius: 30px;
+  }
+
+  &__input {
+    padding: 0 5px;
+    border: none;
+    outline: none;
+    background-color: #eeeeee;
+  }
+
+  &__icon {
+    height: 20px;
   }
 }
 </style>
